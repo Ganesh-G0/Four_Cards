@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Four Cards Feature Section</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+    :root {
+      --Red: hsl(0, 78%, 62%);
+      --Cyan: hsl(180, 62%, 55%);
+      --Orange: hsl(34, 97%, 64%);
+      --Blue: hsl(212, 86%, 64%);
+      --Very-Dark-Blue: hsl(234, 12%, 34%);
+      --Grayish-Blue: hsl(229, 6%, 66%);
+      --Very-Light-Gray: hsl(0, 0%, 98%);
+    }
+    img {
+      padding-top: 2rem;
+      width: fit-content;
+      align-self: flex-end;
+    }
+    section {
+      margin: 1rem;
+      padding: 1rem;
+      border-top: 4px solid;
+      background-color: white;
+      border-radius: 5px 5px 0 0;
+      box-shadow:0 1rem 3rem rgba(0,0,0,.175);
+      display: flex;
+      flex-direction: column;
+      min-width: 16rem;
+      max-width: 24rem;
+    }
+    div > h1,
+    div > h2,
+    section > h2 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: var(--Very-Dark-Blue);
+    }
+    div > h2 {
+      font-weight: 300;
+    }
+    div > p,
+    section > p {
+      font-size: .8rem;
+      color: var(--Grayish-Blue);
+    }
+    @media (min-width: 640px) {
+      div > h1,
+      div > h2,
+      section > h2,
+      section > h2 {
+        font-size: 1.39rem;
+      }
+      div > p,
+      section > p {
+        font-size: 1rem;
+      } 
+    } 
+    @media (min-width: 1024px) {
+      div > h1,
+      div > h2,
+      section > h1,
+      section > h2 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              screens: {
+                mobile: "375px",
+                desktop: "1440px",
+              },
+              colors: {
+                red: "hsl(0, 78%, 62%)",
+                cyan: "hsl(180, 62%, 55%)",
+                orange: "hsl(34, 97%, 64%)",
+                blue: "hsl(212, 86%, 64%)",
+                vdg: "hsl(234, 12%, 34%)",
+                gb: "hsl(229, 6%, 66%)",
+                vlg: "hsl(0, 0%, 98%)",
+                attribution: "hsl(228, 45%, 44%)",
+              },
+              fontFamily: {
+                primary: ["Poppins", "sans-serif"],
+              },
+              fontSize: {
+                body: "15px",
+              },
+            },
+          },
+        };
+      </script>
+</head>
+<body class="font-primary text-body flex flex-col justify-center items-center">
+  <main class="container mr-2 flex flex-col justify-center items-center lg:m-0">
+    <div class="text-center p-2 pb-5 m-2 w-[18rem] md:w-[34rem]">
+      <h2>Reliable, efficient delivery</h2>
+      <h1>Powered by Technology</h1>
+      <p class="pt-5">
+        Our Artificial Intelligence powered tools use millions of project data points 
+        to ensure that your project is successful
+      </p>
+    </div>
+    <div class="lg:grid lg:grid-cols-3 lg:grid-rows-2">
+      <section class="border-cyan lg:col-start-1 lg:row-span-2 lg:self-center">
+        <h2>Supervisor</h2>      
+        <p>Monitors activity to identify project roadblocks</p>
+        <img src="./images/icon-supervisor.svg" alt="a Magnifying Glass with an eye in it">
+      </section>
+      <section class="border-red lg:col-start-2 lg:row-start-1">
+        <h2>Team Builder</h2>
+        <p>Scans our talent network to create the optimal team for your project</p>
+        <img src="./images/icon-team-builder.svg" alt="House in front of mock up webpage">
+      </section>
+      <section class="border-orange lg:col-start-2 lg:row-start-2">
+        <h2>Karma</h2>
+        <p>Regularly evaluates our talent to ensure quality</p>
+        <img src="./images/icon-karma.svg" alt="a light bulg with a gear inside it">
+      </section>
+      <section class="border-blue lg:col-start-3 lg:row-span-2 lg:self-center">
+        <h2>Calculator</h2>
+        <p>Uses data from past projects to provide better delivery estimates</p>
+        <img src="./images/icon-calculator.svg" alt="a monitor with some statistics">
+      </section>
+    </div>
+  </main>
+  <footer class="text-center text-lg lg:text-xl">Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-attribution">Frontend Mentor</a>
+    <br>Coded by
+    <a href="https://www.frontendmentor.io/profile/Ganesh-G0" target="_blank" class="text-attribution">Ganesh</a>
+  </footer>
+</body>
+</html>
